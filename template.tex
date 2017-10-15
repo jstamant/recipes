@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[iso]{datetime}
+\usepackage{filemod}
+\usepackage{tabto}
+
+\begin{document}
+
+% Set header and footer content
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\thefilemoddate}[3]{\formatdate{#3}{#2}{#1}}
+\lfoot{\filemodprintdate{\jobname}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Title
+\centering\textbf {\Huge Recipe Title} \\
+\raggedright
+
+\section*{Ingredients}
+\TabPositions{0.75in} % Set tabstops for use in ingredients list
+\begin{itemize}
+  \item 1\tab large onion, chopped
+  \item 1 clove\tab	garlic, minced
+  \item 1\tab	large green pepper, chopped
+  \item 1\tab	carrot, diced
+  \item 2 tbsp\tab vegetable oil
+\end{itemize}
+
+\section*{Instructions}
+\begin{enumerate}
+  \item This is in step 1.
+\end{enumerate}
+
+\section*{Notes}
+\begin{itemize}
+  \item 2016-10-01: Some note with some words, yada ydad yada.
+  \item 2016-11-15: Maybe next time you should try using brocolli instead of red
+    peppers, it would taste better, etc.
+\end{itemize}
+
+
+\end{document}
